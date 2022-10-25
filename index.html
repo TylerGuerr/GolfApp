@@ -13,17 +13,18 @@
         <div id="logo">
             <h1>Logo</h1>
         </div>
-        <div id="hamburger">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-              </svg>
+        <div id="hamburger" onclick="getCourse()">
+            <h4>Select Course:</h4>
+            <h4 onclick="foxSelected()" id="fox">Fox Hollow</h4>
+            <h4 onclick="thanksSelected()" id="thanks">Thanksgiving Point</h4>
+            <h4 onclick="spanishSelected()" id="spanish">Spanish Oaks</h4>
         </div>
     </div>
     <div id="play">
-        <h1>Golf Score Card</h1>
+        <h1 id="golfTitle">Golf Score Card</h1>
     </div>
     <div class="addNewPlayer">
-        <button id="addPlayer" onchange="newPlayer()">+ Player</button>
+        <button id="addPlayer" onclick="newPlayer()">+ Player</button>
     </div>
     <div id="playerList">
         <div class="container" id="container">
@@ -46,42 +47,42 @@
                 <tbody>
                 <tr>
                     <th scope="row" id="title">Yardage</th>
-                    <td><input maxlength="4" type="number" id="yard1"></input></td>
-                    <td><input maxlength="4" type="number" id="yard2"></input></td>
-                    <td><input maxlength="4" type="number" id="yard3"></input></td>
-                    <td><input maxlength="4" type="number" id="yard4"></input></td>
-                    <td><input maxlength="4" type="number" id="yard5"></input></td>
-                    <td><input maxlength="4" type="number" id="yard6"></input></td>
-                    <td><input maxlength="4" type="number" id="yard7"></input></td>
-                    <td><input maxlength="4" type="number" id="yard8"></input></td>
-                    <td><input maxlength="4" type="number" id="yard9"></input></td>
-                    <td id="yardTotal" onclick="yardTotal()">SUBMIT</td>
+                    <td class="yard"></td>
+                    <td class="yard"></td>
+                    <td class="yard"></td>
+                    <td class="yard"></td>
+                    <td class="yard"></td>
+                    <td class="yard"></td>
+                    <td class="yard"></td>
+                    <td class="yard"></td>
+                    <td class="yard"></td>
+                    <td id="yardTotal"></td>
                 </tr>
                 <tr>
                     <th scope="row" id="title">Par</th>
-                    <td><input maxlength="4" type="number" id="par1"></input></td>
-                    <td><input maxlength="4" type="number" id="par2"></input></td>
-                    <td><input maxlength="4" type="number" id="par3"></input></td>
-                    <td><input maxlength="4" type="number" id="par4"></input></td>
-                    <td><input maxlength="4" type="number" id="par5"></input></td>
-                    <td><input maxlength="4" type="number" id="par6"></input></td>
-                    <td><input maxlength="4" type="number" id="par7"></input></td>
-                    <td><input maxlength="4" type="number" id="par8"></input></td>
-                    <td><input maxlength="4" type="number" id="par9"></input></td>
-                    <td id="parTotal" onclick="parTotal()">SUBMIT</td>
+                    <td class="par"></td>
+                    <td class="par"></td>
+                    <td class="par"></td>
+                    <td class="par"></td>
+                    <td class="par"></td>
+                    <td class="par"></td>
+                    <td class="par"></td>
+                    <td class="par"></td>
+                    <td class="par"></td>
+                    <td id="parTotal"></td>
                 </tr>
                 <tr>
                     <th scope="row" id="title">Handicap</th>
-                    <td><input maxlength="4" type="number" id="handicap1"></input></td>
-                    <td><input maxlength="4" type="number" id="handicap2"></input></td>
-                    <td><input maxlength="4" type="number" id="handicap3"></input></td>
-                    <td><input maxlength="4" type="number" id="handicap4"></input></td>
-                    <td><input maxlength="4" type="number" id="handicap5"></input></td>
-                    <td><input maxlength="4" type="number" id="handicap6"></input></td>
-                    <td><input maxlength="4" type="number" id="handicap7"></input></td>
-                    <td><input maxlength="4" type="number" id="handicap8"></input></td>
-                    <td><input maxlength="4" type="number" id="handicap9"></input></td>
-                    <td></td>
+                    <td class="handicap"></td>
+                    <td class="handicap"></td>
+                    <td class="handicap"></td>
+                    <td class="handicap"></td>
+                    <td class="handicap"></td>
+                    <td class="handicap"></td>
+                    <td class="handicap"></td>
+                    <td class="handicap"></td>
+                    <td class="handicap"></td>
+                    <td id="handicapTotal"></td>
                 </tr>
                 </tbody>
             </table>   
@@ -103,16 +104,16 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <th scope="row" id="title">Mario</th>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                    <td>8</td>
-                    <td>9</td>
+                    <th scope="row" id="playerName" onclick="getName()">Enter Name...</th>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
                     <td id="totals">SUBMIT</td>
                 </tr>
                 </tbody>
