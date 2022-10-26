@@ -45,7 +45,7 @@ input {
 #play {
   display: flex;
   justify-content: center;
-  padding: 25px 0px 50px 0px;
+  padding: 25px 0px 25px 0px;
 }
 #play h1 {
   font-family: "Ride The Fader";
@@ -53,32 +53,10 @@ input {
   font-size: 50px;
 }
 
-.addNewPlayer {
-  position: absolute;
-}
-.addNewPlayer #addPlayer {
-  position: relative;
-  bottom: 45px;
-  left: 150px;
-  padding: 5px 20px 5px 20px;
-  font-size: 18px;
-  margin-bottom: 5px;
-  color: white;
-  background-color: #343a40;
-  border: none;
-  outline: none;
-  border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
-}
-.addNewPlayer #addPlayer:hover {
-  padding: 6px 21px 6px 21px;
-  text-align: center;
-  animation-duration: 5s;
-}
-
 #container {
   background-color: white;
   padding: 20px 10px 5px 10px;
+  margin-bottom: 50px;
   border-bottom: 5px solid #343a40;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
 }
@@ -89,10 +67,10 @@ input {
 #container table #totals {
   width: 10%;
 }
-#container table #playerName {
+#container table #totals:hover {
   cursor: pointer;
 }
-#container #yardTotal, #container #parTotal {
+#container table #playerName {
   cursor: pointer;
 }
 
@@ -108,32 +86,35 @@ input {
     font-size: 30px;
   }
   #header #hamburger {
+    display: flex;
+    flex-direction: column;
     margin-right: 25px;
   }
   #header #hamburger h4 {
-    font-size: 20px;
+    font-size: 10px;
+  }
+  #header #hamburger #select {
+    padding-bottom: 2px;
+    border-bottom: 0.5px solid white;
+  }
+  #header #hamburger #fox, #header #hamburger #thanks, #header #hamburger #spanish {
+    padding-left: 15px;
   }
   #play {
-    padding: 25px 0px 50px 0px;
+    display: block;
+    text-align: center;
   }
   #play h1 {
     font-size: 40px;
-  }
-  .addNewPlayer #addPlayer {
-    left: 185px;
-    font-size: 15px;
   }
   #container {
     padding: 20px 0px 5px 0px;
   }
   #container table td, #container table th, #container table #title, #container table #totals, #container table #yardTotal, #container table #parTotal {
-    font-size: 13px;
-  }
-  #container table #yardTotal, #container table #parTotal {
-    padding-left: 15px;
+    font-size: 10px;
   }
   input {
-    width: 260%;
+    width: 150%;
     font-size: 13px;
   }
 }

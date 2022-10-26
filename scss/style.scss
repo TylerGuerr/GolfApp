@@ -42,38 +42,17 @@ input {
 #play {
     display: flex;
     justify-content: center;
-    padding: 25px 0px 50px 0px;
+    padding: 25px 0px 25px 0px;
     h1 {
         font-family: "Ride The Fader";
         font-weight: bold;
         font-size: 50px;
     }
 }
-.addNewPlayer {
-    position: absolute;
-    #addPlayer {
-        position: relative;
-        bottom: 45px;
-        left: 150px;
-        padding: 5px 20px 5px 20px;
-        font-size: 18px;
-        margin-bottom: 5px;
-        color: white;
-        background-color: #343a40;
-        border: none;
-        outline: none;
-        border-radius: 20px;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
-    }
-    #addPlayer:hover {
-        padding: 6px 21px 6px 21px;
-        text-align: center;
-        animation-duration: 5s;
-    }
-}
 #container {
     background-color: white;
     padding: 20px 10px 5px 10px;
+    margin-bottom: 50px;
     border-bottom: 5px solid #343a40;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
     table {
@@ -84,13 +63,13 @@ input {
         #totals {
             width: 10%;
         }
+        #totals:hover {
+            cursor: pointer;
+        }
         #playerName {
             cursor: pointer;
         }
     } 
-    #yardTotal, #parTotal {
-        cursor: pointer;
-    }
 }
 
 @media(max-width: 750px){
@@ -104,37 +83,38 @@ input {
             }
         }
         #hamburger {
+            display:flex;
+            flex-direction: column;
             margin-right: 25px;
             h4 {
-                font-size: 20px;
+                font-size: 10px;
+            }
+            #select {
+                padding-bottom: 2px;
+                border-bottom: 0.5px solid white;
+            }
+            #fox, #thanks, #spanish {
+                padding-left: 15px;
             }
         }
     }
     #play {
-        padding: 25px 0px 50px 0px;
+        display:block;
+        text-align: center;
         h1 {
             font-size: 40px;
-        }
-    }
-    .addNewPlayer {
-        #addPlayer {
-            left: 185px;
-            font-size: 15px;
         }
     }
     #container {
         padding: 20px 0px 5px 0px;
         table {
             td, th, #title, #totals, #yardTotal, #parTotal {
-                font-size: 13px;
-            }
-            #yardTotal, #parTotal {
-                padding-left: 15px;
+                font-size: 10px;
             }
         } 
     }
     input {
-        width: 260%;
+        width: 150%;
         font-size: 13px;
     }
 }
