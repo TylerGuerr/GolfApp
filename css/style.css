@@ -53,25 +53,59 @@ input {
   font-size: 50px;
 }
 
-#container {
+#container1 {
   background-color: white;
   padding: 20px 10px 5px 10px;
   margin-bottom: 50px;
   border-bottom: 5px solid #343a40;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
 }
-#container table #title {
+#container1 table #title {
   width: 15%;
   max-width: 15%;
 }
-#container table #totals {
+#container1 table #totals {
   width: 10%;
 }
-#container table #totals:hover {
+#container1 table #totals:hover {
   cursor: pointer;
 }
-#container table #playerName {
+#container1 table #player1, #container1 table #player2, #container1 table #player3, #container1 table #player4 {
   cursor: pointer;
+}
+
+#container2 {
+  background-color: white;
+  padding: 20px 10px 5px 10px;
+  margin-bottom: 50px;
+  border-bottom: 5px solid #343a40;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+}
+#container2 table #title {
+  width: 15%;
+  max-width: 15%;
+}
+#container2 table #totals {
+  width: 10%;
+}
+#container2 table #totals:hover {
+  cursor: pointer;
+}
+#container2 table #card2player1total, #container2 table #card2player2total, #container2 table #card2player3total, #container2 table #card2player4total {
+  cursor: pointer;
+}
+
+.carousel-control-next, .carousel-control-prev {
+  bottom: 0px;
+  width: 10.5%;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  background-color: rgb(62, 87, 93);
+  border-radius: 5px;
+  height: 45px;
+  padding: 15px;
+  transform: scale(1.5);
 }
 
 @media (max-width: 750px) {
@@ -107,15 +141,23 @@ input {
   #play h1 {
     font-size: 40px;
   }
-  #container {
+  #container1 {
     padding: 20px 0px 5px 0px;
   }
-  #container table td, #container table th, #container table #title, #container table #totals, #container table #yardTotal, #container table #parTotal {
+  #container1 table td, #container1 table th, #container1 table #title, #container1 table #totals, #container1 table #yardTotal, #container1 table #parTotal {
     font-size: 10px;
   }
   input {
     width: 150%;
     font-size: 13px;
+  }
+  .carousel-control-next, .carousel-control-prev {
+    bottom: 350px;
+  }
+  .carousel-control-next-icon, .carousel-control-prev-icon {
+    height: 30px;
+    padding: 10px;
+    transform: scale(1);
   }
 }
 
