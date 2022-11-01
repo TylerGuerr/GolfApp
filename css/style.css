@@ -147,12 +147,18 @@ input {
   #container1 table td, #container1 table th, #container1 table #title, #container1 table #totals, #container1 table #yardTotal, #container1 table #parTotal {
     font-size: 10px;
   }
+  #container2 {
+    padding: 20px 0px 5px 0px;
+  }
+  #container2 td, #container2 th, #container2 #title, #container2 #totals, #container2 #yardTotal, #container2 #parTotal {
+    font-size: 10px;
+  }
   input {
     width: 150%;
     font-size: 13px;
   }
   .carousel-control-next, .carousel-control-prev {
-    bottom: 350px;
+    bottom: 500px;
   }
   .carousel-control-next-icon, .carousel-control-prev-icon {
     height: 30px;

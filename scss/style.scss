@@ -145,12 +145,18 @@ input {
             }
         } 
     }
+    #container2 {
+        padding: 20px 0px 5px 0px;
+        td, th, #title, #totals, #yardTotal, #parTotal {
+            font-size: 10px;
+        }
+    }
     input {
         width: 150%;
         font-size: 13px;
     }
     .carousel-control-next, .carousel-control-prev {
-        bottom: 350px;
+        bottom: 500px;
     }
     .carousel-control-next-icon, .carousel-control-prev-icon {
         height: 30px;
