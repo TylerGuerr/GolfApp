@@ -129,7 +129,7 @@ input {
   background-color: rgb(241, 69, 103);
 }
 
-@media (max-width: 750px) {
+@media (max-width: 950px) {
   #header {
     display: flex;
     justify-content: space-between;
