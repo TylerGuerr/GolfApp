@@ -104,6 +104,26 @@ input {
     padding: 15px;
     transform: scale(1.5);
 }
+#end {
+    position: absolute;
+    #endGame {
+        position:relative;
+        bottom: 650px;
+        left: 150px;
+        cursor: pointer;
+        padding: 20px;
+        color: whitesmoke;
+        background-color: crimson;
+        border: none;
+        border-radius: 15px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+        outline: none;
+    }
+    #endGame:hover {
+        padding: 21px;
+        background-color: rgb(241, 69, 103);
+    }
+}
 @media(max-width: 750px){
     #header {
         display: flex;
@@ -163,4 +183,16 @@ input {
         padding: 10px;
         transform: scale(1);
     }
+    #end{
+        #endGame {
+            bottom: 525px;
+            left: 185px;
+            padding: 9px;
+        }
+        #endGame:hover {
+            padding: 9px;
+        }
+
+    }
+
 }

@@ -1,4 +1,3 @@
-let addButton = document.getElementById('addPlayer');
 let playerNames = {
     0: {
         name:'',
@@ -21,8 +20,6 @@ let playerNames = {
         score:''
     }
 }
-
-
 function foxSelected() {
     const fox = document.getElementById('fox');
     let golfTitle = document.getElementById('golfTitle')
@@ -211,6 +208,13 @@ function getPlayer1score(){
     let hole18 = document.getElementById('p1card2hole18score').value;
     let card2player1total = document.getElementById('card2player1total');
     let handicap2Total = document.getElementById('handicap2total').innerHTML;
+    let outHandicap = document.getElementById('handicapTotal').innerHTML;
+    let playerOut = document.getElementById('player1total');
+
+    let outHoleTotal = Number(hole1) + Number(hole2) + Number(hole3) + Number(hole4) + Number(hole5) + Number(hole6) + Number(hole7) + Number(hole8) + Number(hole9);
+    outHandicap = Number(outHandicap);
+    let playerOutTotal = outHoleTotal - outHandicap;
+    playerOut.innerHTML = playerOutTotal;
 
     let total2 = Number(hole1) + Number(hole2) + Number(hole3) + Number(hole4) + Number(hole5) + Number(hole6) + Number(hole7) + Number(hole8) + Number(hole9) + Number(hole10) + Number(hole11) + Number(hole12) + Number(hole13) + Number(hole14) + Number(hole15) + Number(hole16) + Number(hole17) + Number(hole18);
 
@@ -242,6 +246,13 @@ function getPlayer2score(){
     let hole18 = document.getElementById('p2card2hole18score').value;
     let card2player2total = document.getElementById('card2player2total');
     let handicap2Total = document.getElementById('handicap2total').innerHTML;
+    let outHandicap = document.getElementById('handicapTotal').innerHTML;
+    let playerOut = document.getElementById('player2total');
+
+    let outHoleTotal = Number(hole1) + Number(hole2) + Number(hole3) + Number(hole4) + Number(hole5) + Number(hole6) + Number(hole7) + Number(hole8) + Number(hole9);
+    outHandicap = Number(outHandicap);
+    let playerOutTotal = outHoleTotal - outHandicap;
+    playerOut.innerHTML = playerOutTotal;
 
     let total = Number(hole1) + Number(hole2) + Number(hole3) + Number(hole4) + Number(hole5) + Number(hole6) + Number(hole7) + Number(hole8) + Number(hole9) + Number(hole10) + Number(hole11) + Number(hole12) + Number(hole13) + Number(hole14) + Number(hole15) + Number(hole16) + Number(hole17) + Number(hole18);
 
@@ -272,6 +283,13 @@ function getPlayer3score(){
     let hole18 = document.getElementById('p3card2hole18score').value;
     let card2player3total = document.getElementById('card2player3total');
     let handicap2Total = document.getElementById('handicap2total').innerHTML;
+    let outHandicap = document.getElementById('handicapTotal').innerHTML;
+    let playerOut = document.getElementById('player3total');
+
+    let outHoleTotal = Number(hole1) + Number(hole2) + Number(hole3) + Number(hole4) + Number(hole5) + Number(hole6) + Number(hole7) + Number(hole8) + Number(hole9);
+    outHandicap = Number(outHandicap);
+    let playerOutTotal = outHoleTotal - outHandicap;
+    playerOut.innerHTML = playerOutTotal;
 
     let total = Number(hole1) + Number(hole2) + Number(hole3) + Number(hole4) + Number(hole5) + Number(hole6) + Number(hole7) + Number(hole8) + Number(hole9) + Number(hole10) + Number(hole11) + Number(hole12) + Number(hole13) + Number(hole14) + Number(hole15) + Number(hole16) + Number(hole17) + Number(hole18);
 
@@ -302,6 +320,13 @@ function getPlayer4score(){
     let hole18 = document.getElementById('p3card2hole18score').value;
     let card2player4total = document.getElementById('card2player4total');
     let handicap2Total = document.getElementById('handicap2total').innerHTML;
+    let outHandicap = document.getElementById('handicapTotal').innerHTML;
+    let playerOut = document.getElementById('player4total');
+
+    let outHoleTotal = Number(hole1) + Number(hole2) + Number(hole3) + Number(hole4) + Number(hole5) + Number(hole6) + Number(hole7) + Number(hole8) + Number(hole9);
+    outHandicap = Number(outHandicap);
+    let playerOutTotal = outHoleTotal - outHandicap;
+    playerOut.innerHTML = playerOutTotal;
 
     let total = Number(hole1) + Number(hole2) + Number(hole3) + Number(hole4) + Number(hole5) + Number(hole6) + Number(hole7) + Number(hole8) + Number(hole9) + Number(hole10) + Number(hole11) + Number(hole12) + Number(hole13) + Number(hole14) + Number(hole15) + Number(hole16) + Number(hole17) + Number(hole18);
 
@@ -310,4 +335,18 @@ function getPlayer4score(){
 
     card2player4total.innerText = final;
     playerNames[3].score = final;
+}
+function endGame() {
+    if(playerNames[0].score < playerNames[1].score && playerNames[0].score < playerNames[2].score && playerNames[0].score < playerNames[3].score) {
+        window.alert(`${playerNames[0].name} wins`);
+    }
+    if(playerNames[1].score < playerNames[0].score && playerNames[1].score < playerNames[2].score && playerNames[1].score < playerNames[3].score) {
+        window.alert(`${playerNames[1].name} wins`);
+    }
+    if(playerNames[2].score < playerNames[0].score && playerNames[2].score < playerNames[1].score && playerNames[2].score < playerNames[3].score) {
+        window.alert(`${playerNames[2].name} wins`);
+    }
+    if(playerNames[3].score < playerNames[0].score && playerNames[3].score < playerNames[1].score && playerNames[3].score < playerNames[2].score) {
+        window.alert(`${playerNames[3].name} wins`);
+    }
 }
