@@ -20,6 +20,7 @@ let playerNames = {
         score:''
     }
 }
+//Loading API
 function foxSelected() {
     const fox = document.getElementById('fox');
     let golfTitle = document.getElementById('golfTitle')
@@ -82,7 +83,7 @@ function spanishSelected() {
         handicapTotal(data);
     }
 }
-
+//Getting Player Names and Attaching them to playerNames Array
 function getNamePlayer1() {
     let name = prompt("Enter a Name", "Name....");
     let card2Name = document.getElementById('card2name1');
@@ -123,7 +124,7 @@ function getNamePlayer4() {
     card2Name.innerText = name;
     console.log(playerNames);
 }
-
+//Displaying Data from API
 function yardTotal(data) {
     let yardNum = document.getElementsByClassName('yard');
     let firstYardTotal = document.getElementById('yardTotal');
@@ -186,7 +187,7 @@ function handicapTotal(data) {
         }
     }
 }
-
+//Calculating Score for each player
 function getPlayer1score(){
     let hole1 = document.getElementById('p1hole1score').value;
     let hole2 = document.getElementById('p1hole2score').value;
@@ -309,15 +310,15 @@ function getPlayer4score(){
     let hole7 = document.getElementById('p4hole7score').value;
     let hole8 = document.getElementById('p4hole8score').value;
     let hole9 = document.getElementById('p4hole9score').value;
-    let hole10 = document.getElementById('p3card2hole10score').value;
-    let hole11 = document.getElementById('p3card2hole11score').value;
-    let hole12 = document.getElementById('p3card2hole12score').value;
-    let hole13 = document.getElementById('p3card2hole13score').value;
-    let hole14 = document.getElementById('p3card2hole14score').value;
-    let hole15 = document.getElementById('p3card2hole15score').value;
-    let hole16 = document.getElementById('p3card2hole16score').value;
-    let hole17 = document.getElementById('p3card2hole17score').value;
-    let hole18 = document.getElementById('p3card2hole18score').value;
+    let hole10 = document.getElementById('p4card2hole10score').value;
+    let hole11 = document.getElementById('p4card2hole11score').value;
+    let hole12 = document.getElementById('p4card2hole12score').value;
+    let hole13 = document.getElementById('p4card2hole13score').value;
+    let hole14 = document.getElementById('p4card2hole14score').value;
+    let hole15 = document.getElementById('p4card2hole15score').value;
+    let hole16 = document.getElementById('p4card2hole16score').value;
+    let hole17 = document.getElementById('p4card2hole17score').value;
+    let hole18 = document.getElementById('p4card2hole18score').value;
     let card2player4total = document.getElementById('card2player4total');
     let handicap2Total = document.getElementById('handicap2total').innerHTML;
     let outHandicap = document.getElementById('handicapTotal').innerHTML;
@@ -336,16 +337,21 @@ function getPlayer4score(){
     card2player4total.innerText = final;
     playerNames[3].score = final;
 }
+//Check which player wins or ties
 function endGame() {
+    //player 1 wins
     if(playerNames[0].score < playerNames[1].score && playerNames[0].score < playerNames[2].score && playerNames[0].score < playerNames[3].score) {
         window.alert(`${playerNames[0].name} wins`);
     }
+    //player 2 wins
     if(playerNames[1].score < playerNames[0].score && playerNames[1].score < playerNames[2].score && playerNames[1].score < playerNames[3].score) {
         window.alert(`${playerNames[1].name} wins`);
     }
+    //player 3 wins
     if(playerNames[2].score < playerNames[0].score && playerNames[2].score < playerNames[1].score && playerNames[2].score < playerNames[3].score) {
         window.alert(`${playerNames[2].name} wins`);
     }
+    //player 4 wins
     if(playerNames[3].score < playerNames[0].score && playerNames[3].score < playerNames[1].score && playerNames[3].score < playerNames[2].score) {
         window.alert(`${playerNames[3].name} wins`);
     }
